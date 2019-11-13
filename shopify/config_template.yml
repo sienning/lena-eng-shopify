@@ -1,0 +1,6 @@
+development:
+  password: 
+  theme_id: "79266578503"
+  store: lena-eng.myshopify.com
+  ignore_files:
+  - config/settings_data.json
