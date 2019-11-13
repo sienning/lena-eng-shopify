@@ -1,21 +1,22 @@
 <hr>
-  <div id="section-cta">
+  <div id="section-cta" style="
+  width: fit-content;
+  text-align: center;
+  margin: auto;">
     <h3> {{ section.settings.text-box }} </h3>
-    <a href="{{ section.settings.link }}" class="button">{{ section.settings.linktext }}</a>
+    <a href="{{ section.settings.link }}" class="btn">{{ section.settings.linktext }}</a>
   </div>
 <hr>
 
 {% schema %}
 {
   "name": "Button",
-  "tag": "section",
   "settings": [
     {
       "id": "text-box",
       "type": "text",
       "label": "Heading",
-      "default": "Button Title",
-
+      "default": "Title"
     },
     {
       "id": "link",
@@ -25,10 +26,41 @@
     {
       "id": "linktext",
       "type": "text",
-      "label": "Button text",
-      "default": "Click Here"
+        "label": "Button text",
+        "default": "Click Here"
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Button Size",
+      "default": "medium",
+      "options": [
+        {
+          "label": "Small",
+          "value": "small"
+        },
+        {
+          "label": "Medium",
+          "value": "medium"
+        },
+        {
+          "label": "Large",
+          "value": "large"
+        }
+      ]
+
     }
-  ]
+  ],
+  "presets": [
+    {
+        "category": "Button",
+        "name": "Button",
+        "settings": {
+          "text-box": "Title",
+          "linktext": "Click Here"
+        }
+      }
+    ]
 }
 {% endschema %}
 
