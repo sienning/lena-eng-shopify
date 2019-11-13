@@ -1,4 +1,4 @@
-#Read Me
+# Read Me
 Thème du site Léna ENG
 
 ## config.yml
