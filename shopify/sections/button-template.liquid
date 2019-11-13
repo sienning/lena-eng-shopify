@@ -4,7 +4,7 @@
   text-align: center;
   margin: auto;">
     <h3> {{ section.settings.text-box }} </h3>
-    <a href="{{ section.settings.link }}" class=" btn btn-{{ section.settings.height }}">{{ section.settings.linktext }}</a>
+    <a href="{{ section.settings.link }}" class="btn btn-color btn-{{ section.settings.height }}" style="background-color: {{ section.settings.button-color }};" >{{ section.settings.linktext }}</a>
   </div>
 <hr>
 
@@ -26,8 +26,14 @@
     {
       "id": "linktext",
       "type": "text",
-        "label": "Button text",
-        "default": "Click Here"
+      "label": "Button text",
+      "default": "Click Here"
+    },
+    {
+      "id": "button-color",
+      "type": "color",
+      "label": "Background color",
+      "default": "#ffa729"
     },
     {
       "type": "select",
@@ -48,7 +54,6 @@
           "value": "large"
         }
       ]
-
     }
   ],
   "presets": [
@@ -57,7 +62,8 @@
         "name": "Button",
         "settings": {
           "text-box": "Title",
-          "linktext": "Click Here"
+          "linktext": "Click Here",
+          "button-color": "#ffa729"
         }
       }
     ]
